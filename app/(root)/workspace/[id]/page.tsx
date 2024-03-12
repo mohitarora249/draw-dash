@@ -8,9 +8,12 @@ const Workspace = ({ params }: any) => {
   const { fileData, setTriggerSave, triggerSave } = useFile({ id: params.id });
 
   return (
-    <div className="h-full">
-      <Header onSave={() => setTriggerSave(!triggerSave)} />
-      <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="flex flex-col h-screen w-full">
+      <Header
+        fileName={fileData?.fileName}
+        onSave={() => setTriggerSave(!triggerSave)}
+      />
+      <div className="flex-1 h-full grid grid-cols-1 md:grid-cols-2">
         <div className="h-full">
           <Editor
             onSaveTrigger={triggerSave}

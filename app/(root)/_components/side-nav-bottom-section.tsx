@@ -73,12 +73,10 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
           <div>Pricing</div>
         )}
       </Dialog>
-
       <Progress
         value={(totalFiles / MAX_FREE_FILE) * 100}
         className="w-full mt-4"
       />
-
       <h2 className="text-[12px]">
         <strong>{totalFiles}</strong> out of <strong>{MAX_FREE_FILE}</strong>{" "}
         files used

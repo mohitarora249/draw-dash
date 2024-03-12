@@ -25,7 +25,7 @@ function Canvas({ onSaveTrigger, fileId, fileData }: Props) {
     }).then((resp) => console.log(resp));
   };
   return (
-    <div style={{ height: "670px" }}>
+    <div className="h-full w-full">
       {fileData && (
         <Excalidraw
           theme="light"

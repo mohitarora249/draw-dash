@@ -117,8 +117,8 @@ function Editor({
     }
   };
   return (
-    <div>
-      <div id="editorjs" className="ml-20"></div>
+    <div className="h-full w-full" style={{ maxWidth: "100%" }}>
+      <div id="editorjs" className="ml-4"></div>
     </div>
   );
 }
