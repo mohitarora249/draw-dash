@@ -51,12 +51,7 @@ function SideNav() {
   };
 
   return (
-    <div
-      className=" h-screen 
-    fixed w-72 borde-r border-[1px] p-6
-    flex flex-col
-    "
-    >
+    <div className=" h-screen fixed w-72 borde-r border-[1px] p-6 flex flex-col">
       <div className="flex-1">
         <SideNavTopSection
           user={user}
