@@ -6,7 +6,7 @@ import { FILE } from "../../_components/file-list";
 
 type Props = {
   onSaveTrigger: boolean;
-  fileId: string;
+  fileId: any;
   fileData: FILE | any;
 };
 
