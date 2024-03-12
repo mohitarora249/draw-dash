@@ -4,7 +4,7 @@ import { api } from "@/convex/_generated/api";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { useMutation } from "convex/react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 import { toast } from "sonner";
 
 const useCreateTeam = () => {
@@ -30,7 +30,11 @@ const useCreateTeam = () => {
       .catch(() => toast.error("Error occured while creating team"));
   };
 
-  return { teamName, setTeamName, createNewTeam };
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTeamName(e.target.value);
+  };
+
+  return { teamName, onChangeHandler, createNewTeam };
 };
 
 export default useCreateTeam;
