@@ -40,9 +40,7 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
       {/* Add New File Button  */}
       <Dialog>
         <DialogTrigger className="w-full" asChild>
-          <Button className="w-full bg-blue-600  hover:bg-blue-700 justify-start mt-3">
-            New File
-          </Button>
+          <Button className="w-full mt-3">New File</Button>
         </DialogTrigger>
         {totalFiles < MAX_FREE_FILE ? (
           <DialogContent>
