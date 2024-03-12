@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <main className="h-screen w-screen mx-auto max-w-screen-xl px-4 flex flex-col">
       <Header />
-      <MainContent />
+      <div className="flex-1 h-full">
+        <MainContent />
+      </div>
     </main>
   );
 };
