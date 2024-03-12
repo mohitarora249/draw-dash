@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Archive, Flag, Github } from "lucide-react";
+import { Archive, FilePlus } from "lucide-react";
 import React, { useState } from "react";
 import {
   Dialog,
@@ -27,20 +27,23 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
   return (
     <div>
       {menuList.map((menu, index) => (
-        <h2
+        <Button
+          variant="secondary"
           key={index}
-          className="flex gap-2 p-1 px-2 text-[14px] 
-        hover:bg-gray-100 rounded-md cursor-pointer"
+          className="w-full mt-3 gap-2 justify-start"
         >
-          <menu.icon className="h-5 w-5" />
+          <menu.icon className="h-4 w-4" />
           {menu.name}
-        </h2>
+        </Button>
       ))}
 
       {/* Add New File Button  */}
       <Dialog>
         <DialogTrigger className="w-full" asChild>
-          <Button className="w-full mt-3">New File</Button>
+          <Button className="w-full mt-3 gap-2 justify-start">
+            <FilePlus className="h-4 w-4 " />
+            New File
+          </Button>
         </DialogTrigger>
         {totalFiles < MAX_FREE_FILE ? (
           <DialogContent>
